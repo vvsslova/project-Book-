@@ -48,6 +48,7 @@ public class Book {
      */
     public void getBookInfo() {
         System.out.println("Это книга " + title + "\n" + "Её автор: " + author + "\n" + "Выпущена издательским домом " + publishingHouse + " в " + yearPublication + " году");
+        log.info("Получена информация об экзмепляре книги");
     }
 
     /**
@@ -99,6 +100,7 @@ public class Book {
             double bookThickness;
             bookThickness = Math.round((pageCount * 0.1) + 3);
             System.out.println("Толщина корешка: " + bookThickness + " мм" + "\n" + "Цвет обложки: " + color + "\n" + "Типографические данные: " + "\n" + "Цвет: " + color + "\n" + "Шрифт: " + font + "\n" + "Размер шрифта: " + fontSize);
+            log.info("Получена информация о макете дизайна книги");
         }
     }
 
@@ -125,6 +127,7 @@ public class Book {
                 System.out.println("Невозможно прочитать больше, чем страниц в книге");
             } else {
                 System.out.println("Количество прочитанных страниц: " + progress + " из " + pageCount);
+                log.info("Изменен прогресс чтения книги");
             }
         }
     }
